@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   # Generated model routes
   resources :books
-  # need routes for authors and categories ...
+  resources :authors
+  # need routes for categories ...
   
   # Additional routes we've created for this project
   get 'proposed' => 'books#proposed', as: :proposed_books
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   
   # Set the root url
   root to: 'books#index', as: :home
-  
+
 end
